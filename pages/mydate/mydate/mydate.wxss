@@ -1,1 +1,4 @@
 /* pages/mydate/mydate/mydate.wxss */
+.my-data{
+  text-align: center;
+}

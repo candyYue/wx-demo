@@ -1,4 +1,9 @@
 <!--pages/mydate/mydate/mydate.wxml-->
-<view class="" hover-class="none" hover-stop-propagation="false">
-  {{currentInfo.des}}
+<view id="container" hover-class="none" hover-stop-propagation="false" class="my-data">
+  <mp-icon icon="back" color="black" size="{{18}}"></mp-icon>
+  <text>距离{{currentInfo.des}}还有</text>
+  <view>
+    
+  </view>
+  <text>天</text>
 </view>

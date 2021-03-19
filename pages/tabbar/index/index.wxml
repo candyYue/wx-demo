@@ -12,7 +12,7 @@
   </mp-cells>
 
     
-    <button type="primary" class="add-btn">
+    <button type="primary" class="add-btn" bindtap='addDate'>
      新增日期倒计时
     </button>
 </view>

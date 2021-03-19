@@ -1,4 +1,3 @@
-// pages/components/navigationBar/navigationBar.js
 Component({
   externalClasses: ['top-navigation'],
   /**

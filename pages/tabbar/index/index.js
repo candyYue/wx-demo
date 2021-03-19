@@ -37,6 +37,11 @@ Page({
       url:`../../mydate/mydate/mydate?dateinfo=${JSON.stringify(dateinfo)}`
     })
   },
+  addDate(){
+    wx.navigateTo({
+      url:"../../mydate/adddate/adddate"
+    })
+  },
   onLoad() {
     
   },

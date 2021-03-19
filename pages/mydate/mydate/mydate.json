@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "tabBar": {
+    "custom": false,
+    "navigationBarTitleText":"日期倒计时"
+  }
 }

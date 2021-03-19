@@ -1,4 +1,3 @@
-/* pages/components/navigationBar/navigationBar.wxss */
 .navigation-container {
   position: fixed;
   width: 100%;

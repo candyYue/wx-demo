@@ -1,2 +1,4 @@
 <!--pages/mydate/adddate/adddate.wxml-->
-<text>pages/mydate/adddate/adddate.wxml</text>
+<view id="container" hover-class="none" hover-stop-propagation="false">
+  
+</view>
