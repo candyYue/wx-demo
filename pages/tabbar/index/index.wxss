@@ -1,0 +1,16 @@
+.add-btn{
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.weui-cell{
+  padding: 8px 16px;
+}
+.list-date{
+  color: #a3a3a3;
+  font-size: 14px;
+}
+.list-des{
+  color: #222;
+  font-size: 14px;
+}

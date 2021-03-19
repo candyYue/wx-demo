@@ -1,0 +1,11 @@
+<view class="navigation-container" style="{{'height: ' + navigationBarAndStatusBarHeight}}">
+  <view style="{{'height: ' + statusBarHeight}}"></view>
+  <view class="navigation-bar" style="{{'height:' + navigationBarHeight}}">
+      <view class="navigation-city">
+        {{location}} <van-icon name="arrow-down" bindtap="searchCity"/>
+      </view>
+      <view class="navigation-search" style="{{'height:' + menuButtonHeight}}">
+        <van-search></van-search>
+      </view> 
+  </view>
+</view>

@@ -1,0 +1,24 @@
+/* pages/components/navigationBar/navigationBar.wxss */
+.navigation-container {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: #07C160;
+}
+.navigation-city{
+  color: #fff;
+  font-size: 12px;
+}
+.navigation-bar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navigation-search {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}

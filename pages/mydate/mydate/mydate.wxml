@@ -1,0 +1,4 @@
+<!--pages/mydate/mydate/mydate.wxml-->
+<view class="" hover-class="none" hover-stop-propagation="false">
+  {{currentInfo.des}}
+</view>

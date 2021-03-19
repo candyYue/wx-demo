@@ -1,0 +1,13 @@
+/**index.wxss**/
+.search-input{
+  padding: 0px;
+}
+.top-navigation .van-search{
+  background: transparent;
+  padding: 0;
+  margin: 0 20rpx;
+  border-radius: 20rpx;
+}
+.city{
+  width: 100%;
+}
