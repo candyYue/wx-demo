@@ -7,25 +7,25 @@
   ],
   "subpackages": [
     {
-      "root": "pages/user/",
+      "root": "subpackages/user/",
       "pages": [
         "user"
       ]
     },
     {
-      "root": "pages/home/",
+      "root": "subpackages/home/",
       "pages": [
         "home"
       ]
     },
     {
-      "root": "pages/test/",
+      "root": "subpackages/test/",
       "pages": [
         "test"
       ]
     },
     {
-      "root": "pages/mydate/",
+      "root": "subpackages/mydate/",
       "pages": [
         "mydate/mydate",
         "adddate/adddate"

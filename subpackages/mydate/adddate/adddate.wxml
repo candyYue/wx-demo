@@ -1,0 +1,27 @@
+<!--pages/mydate/adddate/adddate.wxml-->
+<view id="container" class="add-date" hover-class="none" hover-stop-propagation="false">
+  <mp-cells title="名称">
+      <mp-cell>
+        <input class="weui-input" auto-focus 
+        placeholder="将会获取焦点" bindinput='getInputValue'/>
+      </mp-cell>
+  </mp-cells>
+  <mp-cells title="日期">
+    <mp-cell>
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="picker">
+            <text wx:if="{{date}}">{{date}}</text>
+            <text wx:else>请选择日期倒计时</text>
+        </view>
+      </picker>
+    </mp-cell>
+  </mp-cells>
+  
+
+  <button type="primary" bindtap="comfirm">
+    保存
+  </button>
+  <button class="add-btn" bindtap="cancel">
+    返回
+  </button>
+</view>

@@ -12,19 +12,7 @@ Page({
       text: '删除',
       extClass: 'test'
     }],
-    dateList:[{
-      id:1,
-      date:'2020-01-01',
-      des:'生日'
-    },{
-      id:2,
-      date:'2020-01-01',
-      des:'生日'
-    },{
-      id:3,
-      date:'2020-01-01',
-      des:'生日'
-    }]
+    dateList:[]
   },
   slideButtonTap(e) {
     console.log('slide button tap', e.detail)
@@ -34,16 +22,28 @@ Page({
     console.log(dateinfo)
 
     wx.navigateTo({
-      url:`../../mydate/mydate/mydate?dateinfo=${JSON.stringify(dateinfo)}`
+      url:`/subpackages/mydate/mydate/mydate?dateinfo=${JSON.stringify(dateinfo)}`
     })
   },
   addDate(){
     wx.navigateTo({
-      url:"../../mydate/adddate/adddate"
+      url:"/subpackages/mydate/adddate/adddate"
     })
   },
   onLoad() {
-    
+    const that = this
+    wx.getStorage({
+      key: 'countdown',
+      success(res){
+        if(res.data){
+          const list = JSON.parse(res.data)
+          that.setData({
+            dateList:list
+          })
+          console.log(list)
+        }
+      }
+    })
   },
   onShow(){
     if (typeof this.getTabBar === 'function' &&this.getTabBar()) {
@@ -51,5 +51,6 @@ Page({
         selected: 0
       })
     }
+
   },
 })

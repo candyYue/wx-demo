@@ -1,0 +1,4 @@
+/* pages/mydate/adddate/adddate.wxss */
+.add-date{
+  margin: 0 20px;
+}
