@@ -2,7 +2,7 @@
 <view id="container">
   <mp-cells ext-class="list-cell">
     <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap"  bindtap="dateDetail"
-      wx:for="{{dateList}}" wx:key="index" data-date="{{item}}">
+    wx:for="{{dateList}}" wx:key="index" data-date="{{item}}" data-index="{{index}}">
       <mp-cell>
         <mp-icon icon="sticker" color="#3a3a3a" size="{{18}}"></mp-icon>
         <text class="list-date">{{item.date}}</text>

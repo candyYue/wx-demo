@@ -2,8 +2,7 @@
 <view id="container" class="add-date" hover-class="none" hover-stop-propagation="false">
   <mp-cells title="名称">
       <mp-cell>
-        <input class="weui-input" auto-focus 
-        placeholder="将会获取焦点" bindinput='getInputValue'/>
+        <input class="weui-input" auto-focus  bindinput='getInputValue' value="{{inputvalue}}"/>
       </mp-cell>
   </mp-cells>
   <mp-cells title="日期">

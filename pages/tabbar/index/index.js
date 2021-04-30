@@ -8,14 +8,20 @@ Page({
   },
   data: {
     slideButtons: [{
-      type: 'warn',
+      type: 'delete',
       text: '删除',
-      extClass: 'test'
+      extClass: 'delete'
     }],
     dateList:[]
   },
   slideButtonTap(e) {
-    console.log('slide button tap', e.detail)
+    //删除
+    if(e.detail.index===0){
+      const list = [...this.data.dateList]
+      list.splice(e.currentTarget.dataset.index,1)
+      this.setData({dateList:list})
+      wx.setStorageSync('dateList', JSON.stringify(this.data.dateList))
+    }
   },
   dateDetail(e){
     const dateinfo = e.currentTarget.dataset.date
@@ -31,19 +37,7 @@ Page({
     })
   },
   onLoad() {
-    const that = this
-    wx.getStorage({
-      key: 'countdown',
-      success(res){
-        if(res.data){
-          const list = JSON.parse(res.data)
-          that.setData({
-            dateList:list
-          })
-          console.log(list)
-        }
-      }
-    })
+    
   },
   onShow(){
     if (typeof this.getTabBar === 'function' &&this.getTabBar()) {
@@ -51,6 +45,19 @@ Page({
         selected: 0
       })
     }
-
+    this.getdatalist()
   },
+  getdatalist(){
+    wx.getStorage({
+      key: 'dateList',
+      success:(res)=>{
+        if(res.data){
+          const list = JSON.parse(res.data)
+          this.setData({
+            dateList:list
+          })
+        }
+      }
+    })
+  }
 })

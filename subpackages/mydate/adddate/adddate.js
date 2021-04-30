@@ -18,26 +18,31 @@ Page({
       inputvalue:e.detail.value
     })
   },
+  clearForm(){
+    this.setData({ inputvalue:''})
+    this.setData({ date:''})
+  },
   comfirm(){
-    const form =[{
+    const form ={
       des:this.data.inputvalue,
       date:this.data.date
-    }]
-    
+    }
     var StorageInfo = wx.getStorageInfoSync()
-    if(StorageInfo.keys.includes('countdown')){
+    if(StorageInfo.keys.includes('dateList')){
       wx.getStorage({
-        key: 'countdown',
-        success(res){
+        key: 'dateList',
+        success:(res)=>{
           const pre = JSON.parse(res.data)
-          const countdown = pre.push(form)
-          wx.setStorageSync('countdown',
-          JSON.stringify(countdown))
+          const dateList = pre.concat(form)
+          wx.setStorageSync('dateList',
+          JSON.stringify(dateList))
+          this.clearForm()
         }
       })
     }else{
-      wx.setStorageSync('countdown',
-      JSON.stringify(form))
+      wx.setStorageSync('dateList',
+      JSON.stringify([form]))
+      this.clearForm()
     }
   },
   cancel(){
