@@ -21,6 +21,12 @@
         {
           "name": "pages/tabbar/index/index",
           "pathName": "pages/tabbar/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "subpackages/mydate/adddate/adddate",
+          "pathName": "subpackages/mydate/adddate/adddate",
           "scene": null
         }
       ]

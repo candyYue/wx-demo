@@ -1,4 +1,6 @@
 // pages/mydate/adddate/adddate.js
+const db = wx.cloud.database() // 云开发请求数据
+const _ = db.command
 Page({
 
   /**
@@ -47,5 +49,28 @@ Page({
   },
   cancel(){
     wx.navigateBack()
+  },
+  onLoad(){
+    db.collection('todos').add({
+      data: {
+        description: "learn cloud database",
+        due: new Date(),
+        tags: [],
+        // 位置（113°E，23°N）
+        location: new db.Geo.Point(113, 23),
+        done: false
+      }
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.error(err)
+    })
+
+    // db.collection('todos')
+    // .where({
+    //   _openid: 'olhIc5Pzw-M8xPWrNx-K6WIjUQa8' // 填入当前用户 openid
+    // }).get().then(res => {
+    //   console.log(res)
+    // })
   }
 })
