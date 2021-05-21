@@ -1,6 +1,0 @@
-<!--pages/user/page/user.wxml-->
-<view>
-  <button>注册</button>
-  <button>登录</button>
-</view>
-

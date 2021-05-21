@@ -7,21 +7,15 @@
   ],
   "subpackages": [
     {
-      "root": "subpackages/user/",
-      "pages": [
-        "user"
-      ]
-    },
-    {
       "root": "subpackages/home/",
       "pages": [
         "home"
       ]
     },
     {
-      "root": "subpackages/test/",
+      "root": "subpackages/foot/",
       "pages": [
-        "test"
+        "foot"
       ]
     },
     {
