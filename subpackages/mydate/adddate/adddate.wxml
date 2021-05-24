@@ -1,6 +1,6 @@
 <!--pages/mydate/adddate/adddate.wxml-->
 <view id="container" class="add-date" hover-class="none" hover-stop-propagation="false">
-  <mp-cells title="名称">
+  <mp-cells title="事件描述">
       <mp-cell>
         <input class="weui-input" auto-focus  bindinput='getInputValue' value="{{inputvalue}}"/>
       </mp-cell>

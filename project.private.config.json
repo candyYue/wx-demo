@@ -13,20 +13,15 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/test/test",
-          "pathName": "pages/test/test",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/tabbar/index/index",
-          "pathName": "pages/tabbar/index/index",
+          "name": "subpackages/todoBubble/todoBubble",
+          "pathName": "subpackages/todoBubble/todoBubble",
           "query": "",
           "scene": null
         },
         {
           "name": "subpackages/mydate/adddate/adddate",
           "pathName": "subpackages/mydate/adddate/adddate",
+          "query": "",
           "scene": null
         }
       ]

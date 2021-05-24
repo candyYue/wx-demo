@@ -1,0 +1,14 @@
+<view id="container" class="todoBubble-page">
+  <text class="round-btn" bindtap="addTodo" wx:if="{{!addshow}}">+</text>
+  <view class="bottom-bar">
+    <text class="bottom-bar-center"></text>
+  </view>
+  <page-container show="{{addshow}}" class="add-page" bind:clickoverlay="{{closeShow}}">
+    <image class='background-image' src="../../assets/image/bg.jpeg"mode="aspectFill"></image>
+    <view class="content">
+      <button type="primary">页面主操作 Normal</button>
+    </view>
+   
+  </page-container>
+
+</view>

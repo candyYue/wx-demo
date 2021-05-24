@@ -39,18 +39,20 @@ Page({
           wx.setStorageSync('dateList',
           JSON.stringify(dateList))
           this.clearForm()
+          wx.navigateBack()
         }
       })
     }else{
       wx.setStorageSync('dateList',
       JSON.stringify([form]))
       this.clearForm()
+      wx.navigateBack()
     }
   },
   cancel(){
     wx.navigateBack()
   },
-  onLoad(){
+  onLoad(options){
     db.collection('todos').add({
       data: {
         description: "learn cloud database",
@@ -72,5 +74,16 @@ Page({
     // }).get().then(res => {
     //   console.log(res)
     // })
+
+    const currentInfo = JSON.parse(options.dateinfo)
+    this.setData({
+      inputvalue:currentInfo.des
+    })
+    this.setData({
+      date:currentInfo.date
+    })
+  },
+  onShow(options){
+    
   }
 })

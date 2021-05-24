@@ -8,15 +8,25 @@ Page({
   },
   data: {
     slideButtons: [{
+      type: 'edit',
+      text: '编辑'
+    },{
       type: 'delete',
       text: '删除',
-      extClass: 'delete'
+      // extClass: 'delete'
     }],
     dateList:[]
   },
   slideButtonTap(e) {
-    //删除
+    //编辑
     if(e.detail.index===0){
+      const dateinfo = e.currentTarget.dataset.date
+      wx.navigateTo({
+        url:`/subpackages/mydate/adddate/adddate?dateinfo=${JSON.stringify(dateinfo)}`
+      })
+    }
+    //删除
+    if(e.detail.index===1){
       const list = [...this.data.dateList]
       list.splice(e.currentTarget.dataset.index,1)
       this.setData({dateList:list})
@@ -25,8 +35,6 @@ Page({
   },
   dateDetail(e){
     const dateinfo = e.currentTarget.dataset.date
-    console.log(dateinfo)
-
     wx.navigateTo({
       url:`/subpackages/mydate/mydate/mydate?dateinfo=${JSON.stringify(dateinfo)}`
     })

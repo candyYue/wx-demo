@@ -24,6 +24,18 @@
         "mydate/mydate",
         "adddate/adddate"
       ]
+    },
+    {
+      "root": "subpackages/task/",
+      "pages": [
+        "task"
+      ]
+    },
+    {
+      "root": "subpackages/todoBubble/",
+      "pages": [
+        "todoBubble"
+      ]
     }
   ],
   "tabBar": {

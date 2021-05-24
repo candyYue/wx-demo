@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1616049689823, function(require, module, exports) {
+__DEFINE__(1621609357929, function(require, module, exports) {
 if (process.env.TARO_ENV === 'weapp') {
       module.exports = require('./weapp/index')
       module.exports.default = module.exports
@@ -15,8 +15,8 @@ if (process.env.TARO_ENV === 'weapp') {
         module.exports = require('./weapp/index')
         module.exports.default = module.exports
       }
-}, function(modId) {var map = {"./h5/index":1616049689824}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1616049689824, function(require, module, exports) {
+}, function(modId) {var map = {"./h5/index":1621609357930}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1621609357930, function(require, module, exports) {
 var __TEMP__ = require('@tarojs/taro-h5');var Taro = __REQUIRE_DEFAULT__(__TEMP__);
 
 Taro.initPxTransform({ designWidth: 750, deviceRatio: {} });
@@ -74,8 +74,8 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 /* 私有的组件  */
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });var __TEMP__ = require('./components/loading');Object.defineProperty(exports, 'AtLoading', { enumerable: true, configurable: true, get: function() { return __TEMP__.default; } });
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });var __TEMP__ = require('./common/component');Object.defineProperty(exports, 'AtComponent', { enumerable: true, configurable: true, get: function() { return __TEMP__.default; } });
-}, function(modId) { var map = {"./common/component":1616049689877}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1616049689877, function(require, module, exports) {
+}, function(modId) { var map = {"./common/component":1621609357983}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1621609357983, function(require, module, exports) {
 var __TEMP__ = require('@tarojs/taro-h5');var Taro = __REQUIRE_DEFAULT__(__TEMP__);
 const objectToString = style => {
   if (style && typeof style === 'object') {
@@ -108,6 +108,6 @@ AtComponent.options = {
   addGlobalClass: true
 };
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1616049689823);
+return __REQUIRE__(1621609357929);
 })()
 //# sourceMappingURL=index.js.map

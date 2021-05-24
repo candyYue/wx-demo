@@ -2,3 +2,12 @@
 .add-date{
   margin: 0 20px;
 }
+.picker text{
+  color: var(--weui-FG-1);
+  font-size: 14px;
+  line-height: 1.4
+}
+button{
+  margin: 20px 0;
+  font-size: 14px;
+}

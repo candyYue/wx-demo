@@ -23,7 +23,6 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -34,10 +33,10 @@
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": true,
+    "useApiHostProcess": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.16.1",
@@ -52,24 +51,27 @@
     "servePath": ""
   },
   "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
+    "plugin": {
       "list": []
     },
     "game": {
-      "list": []
-    },
-    "plugin": {
       "list": []
     },
     "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "subpackages/todoBubble/todoBubble",
+          "pathName": "subpackages/todoBubble/todoBubble",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }
