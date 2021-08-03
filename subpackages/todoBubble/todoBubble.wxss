@@ -57,3 +57,84 @@
   height: 100%;
   overflow: auto;
 }
+.bubble-list{
+  padding: 30px;
+}
+.bubble-list,.bubble-item{
+  position: relative;
+  display: inline-block;
+  transform-style: preserve-3d;
+}
+.bubble-item{
+  margin: 5px;
+  border-radius: 50%;
+  animation: idle 4s ease-in-out infinite;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 0.1em #0cf inset, 0 0 1em #0cf inset;
+  color: currentColor;
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.4s linear,  box-shadow 0.15s linear,  margin 0.1s linear,  width 0.1s linear,  height 0.1s linear;
+}
+
+.bubble-item::focus{
+  box-shadow: 0 0 0 0.1em #ff0 inset, 0 0 1em #ff0 inset;
+  outline: 0;
+  color: #ff0;
+}
+.bubble-item::hover {
+  margin: -5% 0 0 -5%;
+  width: 110%;
+  height: 110%;
+}
+
+@keyframes rise {
+  from {
+    transform: translateZ(0);
+  }
+  15% {
+    transform: translateZ(-1em);
+  }
+  to {
+    transform: translateZ(35em);
+  }
+}
+@keyframes fadeOut {
+  from, 15% {
+    opacity: 1;
+  }
+  50%, to {
+    opacity: 0;
+  }
+}
+@keyframes pop {
+  from {
+    margin: -5% 0 0 -5%;
+    width: 110%;
+    height: 110%;
+    opacity: 1;
+  }
+  10%, to {
+    margin: -20% 0 0 -20%;
+    width: 140%;
+    height: 140%;
+    opacity: 0;
+  }
+}
+@keyframes idle {
+  from, to {
+    transform: translate(-50%, -48%);
+  }
+  25% {
+    transform: translate(-52%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -52%);
+  }
+  75% {
+    transform: translate(-48%, -50%);
+  }
+}

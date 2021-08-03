@@ -1,4 +1,4 @@
-// subpackages/task.js
+// subpackages/prettier/prettier.js
 Component({
   /**
    * 组件的属性列表
@@ -11,14 +11,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    initentionOptions:[{
-      type:'A',
-      task_name:'',
-      compony:'',
-      script_name:'',
-      intent_num:100,
-      task_end_time:'2021-05-15'
-    }]
+
   },
 
   /**

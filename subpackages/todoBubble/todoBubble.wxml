@@ -1,4 +1,12 @@
+<wxs module="common" src="/utils/common.wxs"></wxs>
 <view id="container" class="todoBubble-page">
+  <view class="bubble-list">
+    <view class="bubble-item"
+    wx:for="{{bubbleList}}" wx:key="index" data-index='{{index}}' 
+    style="width:{{common.getRandom(60,80)}}px;height:{{common.getRandom(60,80)}}px"
+    >{{item.taskinfo}}</view>
+  </view>
+
   <text class="round-btn" bindtap="addTodo" wx:if="{{!addshow}}">+</text>
   <view class="bottom-bar">
     <text class="bottom-bar-center"></text>

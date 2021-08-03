@@ -74,14 +74,14 @@ Page({
     // }).get().then(res => {
     //   console.log(res)
     // })
-
-    const currentInfo = JSON.parse(options.dateinfo)
-    this.setData({
-      inputvalue:currentInfo.des
-    })
-    this.setData({
-      date:currentInfo.date
-    })
+    console.log(options)
+    // const currentInfo = JSON.parse(options.dateinfo)
+    // this.setData({
+    //   inputvalue:currentInfo.des
+    // })
+    // this.setData({
+    //   date:currentInfo.date
+    // })
   },
   onShow(options){
     

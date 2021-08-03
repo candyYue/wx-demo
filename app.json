@@ -1,8 +1,6 @@
 {
   "pages": [
     "pages/tabbar/index/index",
-    "pages/tabbar/logs/logs",
-    "pages/tabbar/user/user",
     "pages/login/login"
   ],
   "subpackages": [
@@ -19,16 +17,17 @@
       ]
     },
     {
-      "root": "subpackages/mydate/",
+      "root": "subpackages/date/",
       "pages": [
+        "date",
         "mydate/mydate",
         "adddate/adddate"
       ]
     },
     {
-      "root": "subpackages/task/",
+      "root": "subpackages/prettier/",
       "pages": [
-        "task"
+        "prettier"
       ]
     },
     {
@@ -50,7 +49,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/tabbar/user/user",
+        "pagePath": "pages/login/login",
         "text": "我的"
       }
     ]

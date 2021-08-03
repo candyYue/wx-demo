@@ -9,7 +9,7 @@ Component({
       selectedIconPath: "/assets/image/icon_component_HL.png",
       text: "首页"
     }, {
-      pagePath: "/pages/tabbar/user/user",
+      pagePath: "/pages/login/login",
       iconPath: "/assets/image/icon_API.png",
       selectedIconPath: "/assets/image/icon_API_HL.png",
       text: "我的"

@@ -22,8 +22,9 @@ Component({
       time: "12:01",
       musicIndex: 0,
       repeat:false,
-      taskinfo:''
+      taskinfo:'123'
     },
+    bubbleList:[],
     rules: [
       // {name: 'radio',rules: {required: true, message: '单选列表是必选项'}}
     ]
@@ -73,7 +74,7 @@ Component({
             [`formData.musicIndex`]: e.detail.value
         })
     },
-      submitForm() {
+    submitForm() {
         this.selectComponent('#form').validate((valid, errors) => {
           console.log('valid', valid, errors)
           if (!valid) {
@@ -88,9 +89,13 @@ Component({
               wx.showToast({
                   title: '校验通过'
               })
-              console.log(this.data.formData)
+              const list = this.data.bubbleList.concat(this.data.formData)
+              this.setData({
+                bubbleList:list
+              })
+              this.closeShow()
           }
       })
-    }
+    },
   }
 })
