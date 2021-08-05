@@ -1,0 +1,7 @@
+<!--components/tabs/tabs.wxml-->
+<view class="min-tabs">
+  <view wx:for="{{tabList}}" wx:key="index" class="min-tabs-item"  data-active="{{index}}" bindtap="handleClick">
+    <image src="{{active ===index?item.activeurl:item.url}}"wx:if="{{isPic}}"></image>
+    <text>{{item.text}}</text>
+  </view>
+</view>

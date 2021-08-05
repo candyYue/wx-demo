@@ -21,7 +21,7 @@ Page({
     if(e.detail.index===0){
       const dateinfo = e.currentTarget.dataset.date
       wx.navigateTo({
-        url:`/subpackages/mydate/adddate/adddate?dateinfo=${JSON.stringify(dateinfo)}`
+        url:`/subpackages/date/adddate/adddate?dateinfo=${JSON.stringify(dateinfo)}`
       })
     }
     //删除
@@ -35,13 +35,17 @@ Page({
   dateDetail(e){
     const dateinfo = e.currentTarget.dataset.date
     wx.navigateTo({
-      url:`/subpackages/mydate/mydate/mydate?dateinfo=${JSON.stringify(dateinfo)}`
+      url:`/subpackages/date/mydate/mydate?dateinfo=${JSON.stringify(dateinfo)}`
     })
   },
   addDate(){
     wx.navigateTo({
-      url:"/subpackages/mydate/adddate/adddate"
+      url:"/subpackages/date/adddate/adddate"
     })
+  },
+
+  calcSecend(){
+
   },
   onLoad() {
     

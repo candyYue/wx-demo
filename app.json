@@ -1,5 +1,6 @@
 {
   "pages": [
+    "subpackages/prettier/prettier",
     "pages/tabbar/index/index",
     "pages/login/login"
   ],
@@ -22,12 +23,6 @@
         "date",
         "mydate/mydate",
         "adddate/adddate"
-      ]
-    },
-    {
-      "root": "subpackages/prettier/",
-      "pages": [
-        "prettier"
       ]
     },
     {
@@ -55,9 +50,8 @@
     ]
   },
   "window": {
-    "navigationStyle": "custom",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#07C160",
+    "navigationBarBackgroundColor": "#ffffcc",
     "navigationBarTextStyle": "black",
     "pageOrientation": "auto"
   },

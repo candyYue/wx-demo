@@ -1,11 +1,9 @@
 <!--index.wxml-->
-<view id="container">
-  <mp-cells ext-class="list-cell">
-    <mp-slideview bindtap="dateDetail"
-    wx:for="{{List}}" wx:key="index" data-label="{{item.label}}" data-index="{{index}}">
-      <mp-cell>
-        <text>{{item.value}}</text>
-      </mp-cell>
-    </mp-slideview>
-  </mp-cells>
+<view id="container" >
+    <view class="tab-list">
+      <view bindtap="dateDetail"
+      wx:for="{{List}}" wx:key="index" data-label="{{item.label}}" data-index="{{index}}">
+      <text>{{item.value}}</text>
+      </view>
+    </view>
 </view>

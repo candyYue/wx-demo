@@ -17,7 +17,7 @@
   </mp-cells>
   
 
-  <button type="primary" bindtap="comfirm">
+  <button bindtap="comfirm">
     保存
   </button>
   <button class="add-btn" bindtap="cancel">

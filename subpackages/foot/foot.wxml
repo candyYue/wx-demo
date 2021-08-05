@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view id="container">
-    <navigationSearch class="top-navigation"></navigationSearch>
+    <!-- <navigationSearch class="top-navigation"></navigationSearch> -->
     <!-- <van-action-sheet show="{{show}}" actions="{{actions}}" title="标题" bindselect="onSelect" >
       <div class="content">内容</div>
     </van-action-sheet> -->

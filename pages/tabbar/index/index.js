@@ -7,9 +7,10 @@ Page({
   },
   data: {
     List:[
-    {label:'date',value:'日期倒计时'},
-    {label:'todoBubble',value:'待办泡泡'},
-    {label:'prettier',value:'滤镜'}]
+    {label:'date',value:'倒计时'},
+    {label:'todoBubble',value:'todolist'},
+    {label:'prettier',value:'滤镜'},
+    {label:'foot',value:'map'}]
   },
   dateDetail(e){
     const current = e.currentTarget.dataset.label

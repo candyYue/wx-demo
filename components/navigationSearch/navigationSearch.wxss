@@ -4,7 +4,7 @@
   z-index: 99;
   top: 0;
   left: 0;
-  background-color: #07C160;
+  background-color: 	#7D9EC0;
 }
 .navigation-city{
   color: #fff;

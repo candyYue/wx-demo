@@ -3,14 +3,18 @@
   font-size: 14px;
   margin-top: 20px;
 }
-.weui-cell{
-  padding: 8px 16px;
+.tab-list{
+  display: flex;
+  height: 40px;
 }
-.list-date{
-  color: #a3a3a3;
-  font-size: 14px;
+.tab-list view{
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px;
+  flex: 1;
+  /* align-items: center;
+  justify-content: center; */
 }
-.list-des{
-  color: #222;
-  font-size: 14px;
+.tab-list view+.tab-list view{
+  margin-right: 20px;
 }

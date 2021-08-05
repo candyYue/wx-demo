@@ -1,7 +1,8 @@
+
 {
   "navigationBarTitleText": "测试",
   "usingComponents": {
-    "navigationSearch": "../components/navigationSearch/navigationSearch",
+    "navigationSearch": "../../components/navigationSearch/navigationSearch",
     "van-action-sheet":"/miniprogram_npm/vant-weapp/action-sheet/index",
     "van-area":"/miniprogram_npm/vant-weapp/area/index"
   }
