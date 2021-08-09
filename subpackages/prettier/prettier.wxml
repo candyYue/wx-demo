@@ -1,23 +1,24 @@
 <!--subpackages/prettier/prettier.wxml-->
 <view class="page">
+    <button class="mini-btn" type="default" size="mini" class="save-btn" bindtap="handleSave">去保存</button>
 
     <view class="edit-img">
-        <image src="{{editUrl}}" data-src="{{editUrl}}"></image>
-    </view>
-    
-    <view class="edit-action">
-        <view class="section section_gap">
-            <view class="body-view">
-                <slider bindchange="sliderchange" show-value wx:if="{{activeItem!==''}}"/>
-            </view>
-        </view>
-
+        <image src="{{editUrl}}" data-src="{{editUrl}}" style="filter: {{filterStyle}};" mode='aspectFit'></image>
         <min-tabs tabList="{{tabList}}" isPic='true' bind:getActiveItem="getActiveItem"></min-tabs>
     </view>
+    
+    
     <view class="upload-img">
         <view class="upload-btn" bindtap="chooseImage">+</view>
         <view class="img-list">
             <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" wx:for="{{imgList}}" wx:key="index" ></image>
         </view>
+    </view>
+
+    <view class="edit-action" animation="{{animationData}}">
+        <slider bindchange="sliderchange" show-value  value="{{currentStyleValue}}" 
+        block-size="12" activeColor='#ffcc66' class="slider"/>
+        <mp-icon icon="close" class="slider-icon slider-close" bindtap="sliderclose"></mp-icon>
+        <mp-icon icon="done" class="slider-icon slider-done" bindtap="sliderdone"></mp-icon>
     </view>
 </view>

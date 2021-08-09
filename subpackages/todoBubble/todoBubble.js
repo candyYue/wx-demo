@@ -76,7 +76,6 @@ Component({
     },
     submitForm() {
         this.selectComponent('#form').validate((valid, errors) => {
-          console.log('valid', valid, errors)
           if (!valid) {
               const firstError = Object.keys(errors)
               if (firstError.length) {

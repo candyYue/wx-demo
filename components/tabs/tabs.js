@@ -40,7 +40,11 @@ Component({
       this.setData({
         active:e.currentTarget.dataset.active
       })
-      this.triggerEvent('getActiveItem', e.currentTarget.dataset.active)
+      var myEventDetail = {
+        index:e.currentTarget.dataset.active,
+        label:e.currentTarget.dataset.label
+      }
+      this.triggerEvent('getActiveItem', myEventDetail)
     }
   }
 })

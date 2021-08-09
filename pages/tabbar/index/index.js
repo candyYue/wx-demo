@@ -14,7 +14,6 @@ Page({
   },
   dateDetail(e){
     const current = e.currentTarget.dataset.label
-    console.log(e)
     wx.navigateTo({
       url:`/subpackages/${current}/${current}`
     })
