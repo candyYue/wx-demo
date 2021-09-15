@@ -1,9 +1,10 @@
 <!--index.wxml-->
 <view id="container">
-    <!-- <navigationSearch class="top-navigation"></navigationSearch> -->
-    <!-- <van-action-sheet show="{{show}}" actions="{{actions}}" title="标题" bindselect="onSelect" >
-      <div class="content">内容</div>
-    </van-action-sheet> -->
-
-    <van-area title="切換城市" area-list="{{areaList}}" columns-num="2" class="city"/>
+    <!-- <van-area title="切換城市" area-list="{{areaList}}" columns-num="2" class="city"/> -->
+    <map scale='{{4}}' class="map" show-location="true" markers="{{markers}}" latitude="{{latitude}}" longitude="{{longitude}}">
+      <cover-view slot="callout">
+        <cover-view marker-id="1"></cover-view>
+        <cover-view marker-id="2"></cover-view>
+      </cover-view>
+    </map>
 </view>

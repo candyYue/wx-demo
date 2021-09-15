@@ -1,0 +1,36 @@
+<view>
+  <movable-area class='img-box width-full' style="width:100%; height:calc(100vh - 200px)">
+    <image class='original-img' mode="widthFix" src='{{imgUrl}}'></image>
+    <!-- 贴图开始 -->
+    <movable-view wx:if="{{chosedImg}}"
+      style="transform:translate({{stv.offsetX}}px, {{stv.offsetY}}px);width:{{stv.width}}px;height:{{stv.height}}px"
+      x="{{stv.offsetX}}" y="{{stv.offsetY}}" direction="all">
+      <view class='sticker-box' style=' rotate({{Img.rotate}}deg)' catchtouchstart="touchstartCallback"
+        catchtouchmove="touchmoveCallback" catchtouchend="touchendCallback">
+        <image class='sticker width-full' mode="widthFix" src="{{chosedImg}}"></image>
+      </view>
+      <image class='cancel' bindtap='cancel' src='cloud://lovenini-26xm5.6c6f-lovenini-26xm5-1257016884/assets/cancel-close.png'></image>
+    </movable-view>
+    <!-- 贴图结束 -->
+  </movable-area>
+
+  <view class='bottom'>
+    <view class="sticker-lists-body">
+      <scroll-view class="recommend_scroll_x_box" scroll-x="true">
+        <view class="sticker-list" wx:for="{{stickers}}" wx:key='index' data-url="{{item}}" bindtap='changeImg'>
+          <image src='{{item}}'></image>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='tab'>
+      <view class='tab-list clearfix'>
+        <image class='active' mode="widthFix"
+          src='cloud://lovenini-26xm5.6c6f-lovenini-26xm5-1257016884/pic-action/beauty.png'></image>
+      </view>
+      <button class='color-white' bindtap='save' size="mini">下一步 </button>
+      <button bindtap='toImg' class='color-red' size="mini"> 上一步 </button>
+    </view>
+  </view>
+  
+  <canvas style="width: 640px;height: 356.266px;" canvas-id="mycanvas" class="mycanvas"></canvas>
+</view>
